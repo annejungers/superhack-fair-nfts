@@ -50,7 +50,9 @@ A general portal that allows the buyer to check everything that has happened to 
 
 A portal feature allowing an attestation to be attached to an NFT. This can be viewed our portals as well as supporting marketplaces.
 
-A creator portal focussed on showing the creator how their creations are traded, which marketplaces, what royalties are being paid or otherwise, etc.
+A portal feature allowing a motivated person, to 'clean' the NFT by compensating for unpaid royalties.
+
+A creator portal focussed on showing the creator how their creations are traded, on which marketplaces, what royalties are being paid or otherwise, etc.
 
 ## Highlighting royalty avoidance
 Unanswered questions:
@@ -61,28 +63,35 @@ Unanswered questions:
     • what's the incentive? 
     • Who pays? 
 
-MOVING NFT BETWEEN WALLETS
-Proof of Same Human (PoSH):
-Use Worldcoin to detect the case where a an owner has moved an NFT to another wallet that they own.  I.e. owner of sender and receiver is proves that they are the same person.
+## Enforcement strategies
+While it is not possible to prevent avoidance of royalties, it is possible to make it difficult and easily observed. By statnards or widely adopeted conventions, avoidance strategies can be highlighted and contribute the a bad reputation.
 
-Proof of Rugability (PoR):
-The receiving user proves that they can be rugged by the sender. In this way, it is unlikely the receiver would perform the transaction unless they are the same person, close friend, family member, or it is a gift.
+Define a standard method which allows anyone to find out the royalty status of an NFT.
+- onchain extension to ERC721?
+- offchain?
 
-CREATE ERC STANDARDS
-Define an interface that allows anyone to find out the royalty status of an NFT.
+Define a standard way to register a proof of royalty payment.
 Consider:
-    • Is it positive (ie a reputation)?
-    • Is it negative (inverse reputation)?
-    • Is it boolean, tri-state or scalar?
-Define a way to register a proof of royalty payment.
-Consider:
+    • Onchain or offchain?
     • Is it way to pay and set the status?
     • Is it a way to register the payment transaction, the royalty transaction 
-Define how the status gets set
+
+Define how the royalty status can be honestly recorded for historical transactions
     • who sets it?
     • how does it get set?
     • can it be appealed?
-    • A DAO....?
-Define a convention for showing the royalty status on a marketplace
+
+Define a convention for signaling the royalty status to a marketplace
     • A trait?
+    • Attestation
     • Other method?
+
+## The multiple wallet problem
+The problem of "moving NFTs between a holder's wallet" is often quoted as the reason that onchain enforcement is impractical. This is only true if there is no way to remove the stigma or signaling that a transfer not a sale. To achieve this, a couple of strategies can be expored:
+
+### Proof of Same Human (PoSH):
+Using Worldcoin or sybil-detection system a holder can prove that the sender (current owner) and receiver in a transfer are the same person.
+
+### Proof of 'rugability' (PoR):
+No rational actor would trade with another if there it is possible for the seller to 'rug' (effectively double-spend) the NFT. Therefore trading in such away is a signal that is complete trust between the parties.  
+The challenge is then to design a standard protocol where the receiver provides a means by which the sender can reverse the transaction. In addition this protocl must be observable such that it can be used to allow non-payment of royalies without reputational damage to the NFT.
