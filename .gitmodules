@@ -1,0 +1,6 @@
+[submodule "superhack"]
+	path = superhack
+	url = https://github.com/hfccr/superhack
+[submodule "superhack-nft-fairness"]
+	path = superhack-nft-fairness
+	url = https://github.com/AngeloAyranji/superhack-nft-fairness
