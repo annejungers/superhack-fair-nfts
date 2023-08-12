@@ -93,5 +93,5 @@ The problem of "moving NFTs between a holder's wallet" is often quoted as the re
 Using Worldcoin or sybil-detection system, a holder can prove that the sender (current owner) and receiver in a transfer are the same real person.
 
 #### Proof of 'rugability' (PoR):
-No rational actor would trade with another if there it is possible for the seller to 'rug' (effectively double-spend) the NFT. Therefore trading in such away is a signal that is complete trust between the parties.  An observer can have a high level of confidence that the seller and buyer are the same person, family or that the NFT was gifted.
+No rational buyer would trade with seller if it is possible for the seller to 'rug' (effectively double-spend) the NFT. Therefore trading in such away is a signal that is complete trust between the parties.  An observer can have a high level of confidence that the seller and buyer are the same person, family or that the NFT was gifted.
 The challenge is then to design a standard protocol where the receiver provides a means by which the sender can reverse the transaction. In addition this protocol must be observable, such that it can be used to allow non-payment of royalies without reputational damage to the NFT.
